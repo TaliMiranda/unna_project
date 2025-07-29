@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ===== SEO ===== -->
+    <title>Design com Alma - Human Design Aplicado a Projetos Digitais | Unna Blog</title>
+    <meta name="description" content="Descobre como o Human Design pode ser uma bússola criativa para decisões de layout, cores e estrutura. Design que honra a energia única de cada projeto.">
+    <meta name="keywords" content="Human Design, design consciente, design intuitivo, cores e energia, layout personalizado, design holístico, Unna Design">
+    <meta name="author" content="Talita Miranda">
+    <meta name="robots" content="index, follow">
+    
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" type="image/x-icon" href="favicon_io-2/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io-2/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io-2/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io-2/favicon-16x16.png">
+    
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Design com Alma - O Human Design Aplicado a Projetos">
+    <meta property="og:description" content="Human Design não é só autoconhecimento — é também uma bússola criativa para criar projetos alinhados com a energia única de cada marca.">
+    <meta property="og:image" content="images/human_design.webp">
+    <meta property="article:author" content="Talita Miranda">
+    <meta property="article:published_time" content="2025-01-27">
+    
+    <!-- ===== FONTS ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Cormorant:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- ===== STYLES ===== -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog-unified.css">
+    
+    <!-- ===== EMAILJS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <style>
+        /* ===== ESTILOS ESPECÍFICOS PARA ESTE ARTIGO ===== */
+        
+        /* Tipos de energia */
+        .energy-type {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: var(--radius-large);
+            margin: 3rem 0;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            transition: transform var(--transition-fast);
+        }
+
+        .energy-type:hover {
+            transform: translateY(-5px);
+        }
+
+        .type-header {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .manifestor .type-header { 
+            background: linear-gradient(135deg, #b75d69 0%, #8b4651 100%); 
+        }
+        .generator .type-header { 
+            background: linear-gradient(135deg, #f4a460 0%, #cd853f 100%); 
+        }
+        .projector .type-header { 
+            background: linear-gradient(135deg, #4b6584 0%, #3c5270 100%); 
+        }
+        .reflector .type-header { 
+            background: linear-gradient(135deg, #d7c7e5 0%, #b8a6c9 100%); 
+        }
+        .manifesting-generator .type-header { 
+            background: linear-gradient(135deg, #ff6b6b 0%, #f4a460 50%, #4b6584 100%); 
+        }
+
+        .type-header h3 {
+            color: white;
+            margin: 0;
+            font-family: "Fraunces", serif;
+            font-size: 1.4rem;
+        }
+
+        .type-percentage {
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .type-content {
+            padding: 2rem;
+        }
+
+        .type-description {
+            margin-bottom: 1.5rem;
+        }
+
+        .design-application {
+            background: rgba(245, 242, 235, 0.5);
+            border-radius: var(--radius-medium);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .design-application h4 {
+            color: var(--terracotta);
+            margin-bottom: 1rem;
+            font-family: "Fraunces", serif;
+        }
+
+        .design-application ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .design-application li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .design-application li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--cinnamon);
+            font-weight: bold;
+        }
+
+        .real-example {
+            background: rgba(79, 122, 101, 0.1);
+            border-radius: var(--radius-medium);
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .example-intro {
+            margin: 0 0 0.5rem 0;
+            font-weight: 600;
+            color: var(--moss);
+        }
+
+        /* Grid dos centros */
+        .centers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .center-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: var(--radius-medium);
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            transition: all var(--transition-fast);
+        }
+
+        .center-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .center-card h4 {
+            color: var(--moss);
+            margin-bottom: 0.5rem;
+            font-family: "Fraunces", serif;
+        }
+
+        .center-card p {
+            font-size: 0.9rem;
+            margin: 0.3rem 0;
+        }
+
+        /* Processo em passos */
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 3rem 0;
+            justify-content: center;
+        }
+
+        .step {
+            flex: 1 1 180px;
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: var(--terracotta);
+            color: var(--cream);
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .step h4 {
+            color: var(--moss);
+            margin: 0.5rem 0;
+            font-family: "Fraunces", serif;
+        }
+
+        .step p {
+            font-size: 0.9rem;
+        }
+
+        /* Responsividade específica */
+        @media (max-width: 768px) {
+            .type-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .centers-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body class="blog-page">
+    <!-- ===== SKIP LINKS PARA ACESSIBILIDADE ===== -->
+    <div class="skip-links">
+        <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
+        <a href="#nav-menu" class="skip-link">Pular para menu</a>
+    </div>
+
+    <!-- Navegação -->
+    <nav class="nav" id="nav-menu">
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </nav>
+
+    <!-- Overlay de navegação -->
+    <div class="nav-overlay" aria-hidden="true">
+        <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">Sobre</a></li>
+            <li><a href="index.html#galeria">Galeria</a></li>
+            <li><a href="index.html#projetos">Projetos</a></li>
+            <li><a href="index.html#blog">Blog</a></li>
+            <li><a href="index.html#contato">Contacto</a></li>
+        </ul>
+    </div>
+
+     <!-- Botão voltar -->
+     <div class="blog-back-nav">
+        <a href="index.html" class="back-button">← Voltar ao Portfólio</a>
+    </div>
+
+    <main class="blog-article-container" id="main-content">
+        <article class="blog-article-card">
+            
+            <!-- Hero do artigo -->
+            <header class="article-hero">
+                <img src="images/human_design.webp" alt="Human Design - Diagrama ilustrativo" class="article-hero-image">
+                
+                <div class="article-meta">
+                    <time datetime="2025-01-27">27 de Janeiro, 2025</time>
+                    <span class="reading-time">12 min de leitura</span>
+                </div>
+                
+                <h1>Design com Alma</h1>
+                <p class="article-subtitle">O Human Design Aplicado a Projetos</p>
+                
+                <p class="article-excerpt">
+                    E se cada projeto tivesse uma energia única? E se pudéssemos criar designs que não apenas 
+                    comunicam, mas vibram na frequência certa? Bem-vindo ao encontro entre Human Design e 
+                    criação digital - onde estratégia encontra intuição, e cada pixel tem propósito.
+                </p>
+            </header>
+
+            <!-- Conteúdo do artigo -->
+            <div class="article-content">
+                
+                <p class="article-intro">
+                    Quando descobri o Human Design, estava num momento de transição profunda. De administradora 
+                    a designer, procurava uma ponte entre o que sabia ser estratégico e o que sentia ser verdadeiro. 
+                    <strong>Foi então que percebi: Human Design não é apenas sobre conhecer-nos a nós mesmos - 
+                    é uma linguagem para compreender e honrar a energia única de tudo o que criamos</strong>.
+                </p>
+
+                <h2>O Que É Human Design (Para Quem Nunca Ouviu Falar)</h2>
+                
+                <p>
+                    Imagina um mapa que combina astrologia, I Ching, Cabala e física quântica. Agora imagina 
+                    que esse mapa revela <strong>como a tua energia funciona de forma única</strong> - como 
+                    tomas decisões, como interages com o mundo, onde brilhas naturalmente.
+                </p>
+
+                <p>
+                    Human Design divide-nos em 5 tipos energéticos principais, cada um com a sua forma de 
+                    operar no mundo. Mas aqui está o segredo: <strong>estas energias não existem apenas em 
+                    pessoas - existem em marcas, projetos, e em tudo o que criamos</strong>.
+                </p>
+
+                <blockquote class="pull-quote">
+                    "Quando alinhamos o design visual com a energia essencial de um projeto, 
+                    criamos algo que não apenas se vê - sente-se."
+                </blockquote>
+
+                <h2>Os 5 Tipos Energéticos e o Seu Design</h2>
+
+                <!-- Manifestador -->
+                <div class="energy-type manifestor">
+                    <div class="type-header">
+                        <h3>1. Manifestador - A Energia da Iniciação</h3>
+                        <span class="type-percentage">9% da população</span>
+                    </div>
+                    
+                    <div class="type-content">
+                        <div class="type-description">
+                            <p>
+                                <strong>Manifestadores são os iniciadores</strong>. Não esperam permissão, 
+                                criam do nada, abrem caminhos. A sua energia é como um raio - intensa, 
+                                transformadora, impossível de ignorar.
+                            </p>
+                        </div>
+                        
+                        <div class="design-application">
+                            <h4>No Design, isto traduz-se em:</h4>
+                            <ul>
+                                <li><strong>Layouts ousados</strong> que quebram convenções</li>
+                                <li><strong>Cores intensas e contrastantes</strong> - vermelhos profundos, pretos marcantes</li>
+                                <li><strong>Tipografia statement</strong> - grande, bold, impossível de ignorar</li>
+                                <li><strong>Espaço branco estratégico</strong> - o silêncio que amplifica a mensagem</li>
+                                <li><strong>CTAs diretos</strong> - "Começa Agora", não "Talvez Queiras Experimentar"</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="real-example">
+                            <p class="example-intro">💡 <em>Exemplo prático:</em></p>
+                            <p>
+                                Um site para um coach manifestador não teria menus complexos. Teria uma 
+                                landing page impactante, uma mensagem clara, um botão impossível de 
+                                ignorar. Minimalismo com máximo impacto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gerador -->
+                <div class="energy-type generator">
+                    <div class="type-header">
+                        <h3>2. Gerador - A Energia da Criação Sustentável</h3>
+                        <span class="type-percentage">70% da população</span>
+                    </div>
+                    
+                    <div class="type-content">
+                        <div class="type-description">
+                            <p>
+                                <strong>Geradores são a força vital do mundo</strong>. Quando fazem o que 
+                                amam, a sua energia é inesgotável. São builders naturais, criando com 
+                                alegria e consistência.
+                            </p>
+                        </div>
+                        
+                        <div class="design-application">
+                            <h4>No Design, isto manifesta-se como:</h4>
+                            <ul>
+                                <li><strong>Layouts fluidos e orgânicos</strong> que convidam à exploração</li>
+                                <li><strong>Cores quentes e acolhedoras</strong> - laranjas, dourados, terracottas</li>
+                                <li><strong>Múltiplos pontos de entrada</strong> - várias formas de engagement</li>
+                                <li><strong>Conteúdo rico e generoso</strong> - blogs, recursos, tutoriais</li>
+                                <li><strong>Elementos interativos</strong> que respondem e recompensam</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="real-example">
+                            <p class="example-intro">💡 <em>Exemplo prático:</em></p>
+                            <p>
+                                Uma plataforma de cursos de um gerador teria uma homepage vibrante, 
+                                cheia de opções mas sem overwhelm. Cores que energizam, micro-interações 
+                                que deliciam, um design que diz "há tanto para descobrir aqui!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projetor -->
+                <div class="energy-type projector">
+                    <div class="type-header">
+                        <h3>3. Projetor - A Energia da Sabedoria</h3>
+                        <span class="type-percentage">20% da população</span>
+                    </div>
+                    
+                    <div class="type-content">
+                        <div class="type-description">
+                            <p>
+                                <strong>Projetores são os guias naturais</strong>. Veem o que outros não 
+                                veem, compreendem sistemas complexos, optimizam e direcionam. A sua 
+                                energia é focada e penetrante.
+                            </p>
+                        </div>
+                        
+                        <div class="design-application">
+                            <h4>No Design, isto reflete-se em:</h4>
+                            <ul>
+                                <li><strong>Hierarquia visual impecável</strong> - cada elemento no seu lugar perfeito</li>
+                                <li><strong>Cores sofisticadas e profundas</strong> - azuis profundos, verdes sábios, púrpuras</li>
+                                <li><strong>Espaçamento generoso</strong> - design que respira e permite reflexão</li>
+                                <li><strong>Navegação intuitiva</strong> - o utilizador sempre sabe onde está</li>
+                                <li><strong>Conteúdo que educa</strong> antes de vender</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="real-example">
+                            <p class="example-intro">💡 <em>Exemplo prático:</em></p>
+                            <p>
+                                Um portfolio de um consultor projetor seria elegante e focado. Menos 
+                                é mais, mas cada elemento seria perfeito. Case studies detalhados, 
+                                insights profundos, um design que convida ao reconhecimento da expertise.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Refletor -->
+                <div class="energy-type reflector">
+                    <div class="type-header">
+                        <h3>4. Refletor - A Energia do Espelho</h3>
+                        <span class="type-percentage">1% da população</span>
+                    </div>
+                    
+                    <div class="type-content">
+                        <div class="type-description">
+                            <p>
+                                <strong>Refletores são os camaleões sábios</strong>. Refletem e amplificam 
+                                o ambiente à sua volta, trazendo clareza e perspectiva única. São raros 
+                                e preciosos.
+                            </p>
+                        </div>
+                        
+                        <div class="design-application">
+                            <h4>No Design, isto traduz-se por:</h4>
+                            <ul>
+                                <li><strong>Designs adaptativos</strong> que mudam com o contexto</li>
+                                <li><strong>Paletas iridescentes</strong> - cores que mudam com a luz</li>
+                                <li><strong>Elementos fluidos</strong> - gradientes, transparências, sobreposições</li>
+                                <li><strong>Conteúdo que se adapta</strong> ao utilizador</li>
+                                <li><strong>Surpresas subtis</strong> - easter eggs, micro-animações inesperadas</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="real-example">
+                            <p class="example-intro">💡 <em>Exemplo prático:</em></p>
+                            <p>
+                                Um site de um artista refletor poderia mudar sutilmente conforme a 
+                                hora do dia, a estação, ou até a localização do visitante. Um design 
+                                vivo que nunca é exatamente o mesmo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gerador Manifestante -->
+                <div class="energy-type manifesting-generator">
+                    <div class="type-header">
+                        <h3>5. Gerador Manifestante - A Energia Multifacetada</h3>
+                        <span class="type-percentage">33% dos geradores</span>
+                    </div>
+                    
+                    <div class="type-content">
+                        <div class="type-description">
+                            <p>
+                                <strong>MGs são os multi-apaixonados</strong>. Combinam a iniciação do 
+                                Manifestador com a sustentabilidade do Gerador. São rápidos, versáteis, 
+                                sempre em movimento.
+                            </p>
+                        </div>
+                        
+                        <div class="design-application">
+                            <h4>No Design, isto manifesta-se através de:</h4>
+                            <ul>
+                                <li><strong>Layouts dinâmicos</strong> com múltiplas secções distintas</li>
+                                <li><strong>Cores vibrantes e variadas</strong> - paletas arco-íris organizadas</li>
+                                <li><strong>Navegação não-linear</strong> - múltiplos caminhos possíveis</li>
+                                <li><strong>Conteúdo diversificado</strong> - blog, podcast, vídeo, tudo!</li>
+                                <li><strong>Velocidade e eficiência</strong> - load rápido, acesso direto</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="real-example">
+                            <p class="example-intro">💡 <em>Exemplo prático:</em></p>
+                            <p>
+                                Um empreendedor MG teria um site que mostra todos os seus projetos 
+                                sem parecer caótico. Talvez um design modular onde cada projeto tem 
+                                a sua identidade mas tudo se conecta harmoniosamente.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Para Além dos Tipos: Centros, Portas e Canais</h2>
+
+                <p>
+                    O Human Design vai muito além dos tipos. Cada pessoa (e projeto) tem <strong>centros 
+                    definidos e indefinidos</strong>, que nos dizem onde a energia é consistente e onde 
+                    é variável.
+                </p>
+
+                <div class="centers-grid">
+                    <div class="center-card">
+                        <h4>Centro da Cabeça</h4>
+                        <p><strong>Definido:</strong> Design conceptual forte, ideias claras</p>
+                        <p><strong>Indefinido:</strong> Design flexível, inspiração variada</p>
+                    </div>
+
+                    <div class="center-card">
+                        <h4>Centro da Garganta</h4>
+                        <p><strong>Definido:</strong> Mensagem consistente, voz clara</p>
+                        <p><strong>Indefinido:</strong> Comunicação adaptável, múltiplas vozes</p>
+                    </div>
+
+                    <div class="center-card">
+                        <h4>Centro G (Identidade)</h4>
+                        <p><strong>Definido:</strong> Branding sólido, direção clara</p>
+                        <p><strong>Indefinido:</strong> Identidade fluida, camaleónica</p>
+                    </div>
+
+                    <div class="center-card">
+                        <h4>Centro do Coração</h4>
+                        <p><strong>Definido:</strong> Promessas fortes, valor claro</p>
+                        <p><strong>Indefinido:</strong> Valor pela conexão, não pela força</p>
+                    </div>
+
+                    <div class="center-card">
+                        <h4>Centro Solar Plexus</h4>
+                        <p><strong>Definido:</strong> Design emocional, cores vibrantes</p>
+                        <p><strong>Indefinido:</strong> Design neutro, calmo, equilibrado</p>
+                    </div>
+
+                    <div class="center-card">
+                        <h4>Centro Sacral</h4>
+                        <p><strong>Definido:</strong> Energia para projetos longos</p>
+                        <p><strong>Indefinido:</strong> Projetos focados, sprints criativos</p>
+                    </div>
+                </div>
+
+                <h2>Aplicação Prática: Um Processo em 5 Passos</h2>
+
+                <div class="process-steps">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <h4>Descobrir a Energia</h4>
+                        <p>
+                            Fazer o mapa de Human Design do fundador/marca. Se é uma empresa, 
+                            olhar para a energia coletiva da equipa principal.
+                        </p>
+                    </div>
+
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <h4>Identificar os Temas</h4>
+                        <p>
+                            Que tipo de energia domina? Quais centros estão definidos? 
+                            Que história energética está a ser contada?
+                        </p>
+                    </div>
+
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <h4>Traduzir para Design</h4>
+                        <p>
+                            Cores, formas, layouts, tipografia - cada escolha alinhada 
+                            com a energia descoberta.
+                        </p>
+                    </div>
+
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <h4>Testar a Ressonância</h4>
+                        <p>
+                            O design sente-se autêntico? Ressoa com a energia da marca? 
+                            Os clientes ideais sentem-se atraídos?
+                        </p>
+                    </div>
+
+                    <div class="step">
+                        <span class="step-number">5</span>
+                        <h4>Refinar com Intuição</h4>
+                        <p>
+                            Ajustar até que cada elemento esteja em harmonia. O design 
+                            certo sente-se como "voltar a casa".
+                        </p>
+                    </div>
+                </div>
+
+                <div class="insight-box">
+                    <p><strong>Nota Importante:</strong> Human Design não é uma fórmula rígida. 
+                    É uma linguagem, uma ferramenta de compreensão. Use-a como inspiração, 
+                    não como limitação. A intuição e a experiência continuam a ser os melhores guias.</p>
+                </div>
+                
+                <h2>E Se o Teu Design Pudesse Falar?</h2>
+
+                <p>
+                    Imagina um mundo onde cada website, cada marca, cada projeto visual está 
+                    perfeitamente alinhado com a sua energia essencial. Onde <strong>o design 
+                    não é apenas bonito - é verdadeiro</strong>.
+                </p>
+
+                <p>
+                    Este é o convite do Design com Alma: criar a partir de um lugar de profundo 
+                    conhecimento e respeito pela energia única de cada projeto. Não é sobre 
+                    seguir tendências ou copiar o que funciona para outros.
+                </p>
+
+                <p class="article-closing">
+                    <strong>É sobre descobrir a frequência única de cada criação e dar-lhe 
+                    uma forma visual que a honre, amplifique e partilhe com o mundo. Porque 
+                    quando criamos em alinhamento, não apenas comunicamos - ressoamos.</strong>
+                </p>
+
+                <div class="quiz-wrapper" id="mini-quiz">
+                    <h3>Que Energia de Design És Tu?</h3>
+                    <p>Como preferes iniciar projetos?</p>
+                    <button class="quiz-option" onclick="showResult('Manifestador')">Simplesmente começo, sem pedir permissão</button>
+                    <button class="quiz-option" onclick="showResult('Gerador')">Espero sentir entusiasmo genuíno</button>
+                    <button class="quiz-option" onclick="showResult('Projetor')">Analiso e espero ser reconhecido</button>
+                    <button class="quiz-option" onclick="showResult('Refletor')">Observo e espero o momento certo</button>
+                </div>
+
+                <div class="article-cta">
+                    <p>
+                        🌟 <em>Curioso sobre como seria o teu projeto se fosse desenhado em 
+                        alinhamento com a tua energia única? Cada descoberta começa com uma 
+                        conversa. Vamos explorar as possibilidades juntos.</em>
+                    </p>
+                    <a href="index.html#contato" class="cta-button">Descobrir a Minha Energia de Design</a>
+                </div>
+
+                <div class="disclaimer">
+                    <p>
+                        <em>Nota: Human Design é uma ferramenta de autoconhecimento e inspiração 
+                        criativa. Na Unna, usamo-la como uma entre várias abordagens para criar 
+                        designs mais conscientes e alinhados. Cada projeto é único e merece uma 
+                        abordagem personalizada.</em>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Navegação entre artigos -->
+            <nav class="article-navigation" aria-label="Navegação entre artigos">
+                <a href="ux-no-quotidiano.html" class="nav-article prev">
+                    <div class="nav-label">← Artigo Anterior</div>
+                    <div class="nav-title">UX no Quotidiano</div>
+                </a>
+                <a href="processo-criativo-unna.html" class="nav-article next">
+                    <div class="nav-label">Próximo Artigo →</div>
+                    <div class="nav-title">O Processo Criativo Unna</div>
+                </a>
+            </nav>
+
+            <!-- Footer do artigo -->
+            <footer class="article-footer">
+                <div class="article-tags">
+                    <span class="tag">Human Design</span>
+                    <span class="tag">Design Consciente</span>
+                    <span class="tag">Energia e Design</span>
+                    <span class="tag">Branding Intuitivo</span>
+                    <span class="tag">Design Holístico</span>
+                </div>
+
+                <div class="article-share">
+                    <p>Partilha esta reflexão:</p>
+                    <div class="share-links">
+                        <a href="#" class="share-link" onclick="shareArticle('linkedin')">LinkedIn</a>
+                        <a href="#" class="share-link" onclick="shareArticle('facebook')">Facebook</a>
+                        <a href="#" class="share-link" onclick="shareArticle('twitter')">Twitter</a>
+                    </div>
+                </div>
+            </footer>
+        </article>
+    </main>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Quiz interativo
+        function showResult(type) {
+            const quizContainer = document.getElementById('mini-quiz');
+            quizContainer.innerHTML = `
+                <h3>Que Energia de Design És Tu?</h3>
+                <p class="quiz-result"><strong>Tu vibras como um ${type}!</strong></p>
+                <p style="font-size: 0.9rem; margin-top: 1rem;">Isto é apenas um pequeno vislumbre. Para uma análise completa da tua energia de design, vamos conversar!</p>
+            `;
+        }
+
+        // Função para partilhar artigos
+        function shareArticle(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent(document.title);
+            const text = encodeURIComponent("Descobre como o Human Design pode ser uma bússola criativa para projetos digitais verdadeiramente alinhados.");
+            
+            let shareUrl;
+            
+            switch(platform) {
+                case 'linkedin':
+                    shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+                    break;
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+                    break;
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+                    break;
+            }
+            
+            if (shareUrl) {
+                window.open(shareUrl, '_blank', 'width=600,height=400');
+            }
+        }
+    </script>
+</body>
+</html>

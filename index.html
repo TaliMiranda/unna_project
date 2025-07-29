@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&display=swap" as="style">
+    <link rel="preload" href="images/logo_unna_white.png" as="image">
+    
+    <!-- ===== SEO ===== -->
+    <title>Unna | Talita Miranda - Designer & Web Developer UI/UX</title>
+    <meta name="description" content="Portfólio de Talita Miranda, Designer e Web Developer especializada em UI/UX e branding humano. CV disponível para download. Da administração ao design sagrado - experiências digitais que tocam a alma.">
+    <meta name="keywords" content="Designer Porto, Web Developer Portugal, UI/UX Design, Branding Humano, Portfolio Design, Talita Miranda, Unna Design, CV Download">
+    <meta name="author" content="Talita Miranda">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="pt">
+    <meta name="geo.region" content="PT-13">
+    <meta name="geo.placename" content="Póvoa de Varzim, Porto">
+      
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" type="image/x-icon" href="favicon_io-2/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io-2/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io-2/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io-2/favicon-16x16.png">
+    
+    <!-- ===== FONTS ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Cormorant:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- ===== STYLES ===== -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- ===== EMAILJS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body>
+    <!-- ===== SKIP LINKS PARA ACESSIBILIDADE ===== -->
+    <div class="skip-links">
+        <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
+        <a href="#nav-menu" class="skip-link">Pular para menu</a>
+        <a href="#footer-content" class="skip-link">Pular para rodapé</a>
+    </div>
+
+    <!-- Navegação -->
+    <nav class="nav" id="nav-menu">
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </nav>
+
+    <!-- Overlay de navegação -->
+    <div class="nav-overlay" aria-hidden="true">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#projetos">Skills & Projetos</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contato">Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero -->
+    <header class="hero" id="home">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img class="brand-logo" src="images/logo_unna_white.png" alt="Unna">
+            <p class="hero-quote">A Magia Acontece Quando...<br>... deixas de seguir o que "deve funcionar" e começas a honrar o que é verdadeiramente teu.</p>
+        </div>
+    </header>
+
+    <!-- Sementes flutuantes -->
+    <div class="seeds-container">
+        <div class="seed seed1"></div>
+        <div class="seed seed2"></div>
+        <div class="seed seed3"></div>
+        <div class="seed seed4"></div>
+        <div class="seed seed5"></div>
+        <div class="seed seed6"></div>
+    </div>
+
+    <main class="cards-container" id="main-content">
+
+        <!-- Sobre mim -->
+        <section id="about" class="card about-card section" aria-label="Sobre mim">
+            <div class="about-inner">
+                <div class="about-photo" style="background-image:url('images/foto-bn.webp');" aria-label="Fotografia de Talita" tabindex="0"></div>
+                <div class="about-text">
+                    <h2>Sobre mim</h2>
+                    <h1>Da administração ao design sagrado</h1>
+                    <p>Sou a Talita e a minha jornada não foi linear...foi orgânica. </p>
+                    <p><strong>Designer e Web Developer</strong> com foco em UI/UX, branding humano e experiências digitais que tocam a alma.</p>
+                    <p>Em 2010 formei‑me em Administração e tinha tudo planeado, mas algo dentro de mim sussurrava que havia mais.</p>
+                    <p>Em 2019, o nascimento do meu filho mudou tudo, transformando esse sussurro numa busca. <span class="read-more-about">Ler mais…</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria -->
+        <section id="galeria" class="card gallery-card section" aria-label="Galeria de desenhos">
+            <h2>Galeria</h2>
+            <p class="gallery-intro">
+                Cada traço conta uma história. Esta galeria reúne momentos de contemplação e criação, 
+                onde a arte tradicional encontra a inspiração digital que levo para os meus projetos.
+            </p>
+            <div class="masonry-grid">
+                <div class="grid-item tall" style="background-image:url('images/desenho1.webp');" aria-label="Desenho 1" tabindex="0">
+                    <div class="grid-item-overlay">
+                        <div class="grid-item-title">Horizontes Suspensos</div>
+                        <div class="grid-item-description">Uma reflexão sobre transições e novos começos, desenhada durante o confinamento de 2020.</div>
+                        <div class="grid-item-technique">Lápis de cor sobre papel</div>
+                    </div>
+                </div>
+                <div class="grid-item" style="background-image:url('images/desenho2.webp');" aria-label="Desenho 2" tabindex="0">
+                    <div class="grid-item-overlay">
+                        <div class="grid-item-title">Geometria Orgânica</div>
+                        <div class="grid-item-description">Estudo sobre formas naturais que mais tarde inspiraram os blobs animados do site.</div>
+                        <div class="grid-item-technique">Aguarela e grafite</div>
+                    </div>
+                </div>
+                <div class="grid-item wide" style="background-image:url('images/desenho3.webp');" aria-label="Desenho 3" tabindex="0">
+                    <div class="grid-item-overlay">
+                        <div class="grid-item-title">Movimentos Fluidos</div>
+                        <div class="grid-item-description">Exploração de ritmo visual que influenciou a paleta de cores terrosas dos meus projetos digitais.</div>
+                        <div class="grid-item-technique">Tinta acrílica</div>
+                    </div>
+                </div>
+                <div class="grid-item" style="background-image:url('images/desenho4.webp');" aria-label="Desenho 4" tabindex="0">
+                    <div class="grid-item-overlay">
+                        <div class="grid-item-title">Texturas do Quotidiano</div>
+                        <div class="grid-item-description">Observação de patterns naturais que aplico nas interfaces para criar experiências mais humanas.</div>
+                        <div class="grid-item-technique">Lápis 6B</div>
+                    </div>
+                </div>
+                <div class="grid-item wide" style="background-image:url('images/desenho6.webp');" aria-label="Desenho 6" tabindex="0">
+                    <div class="grid-item-overlay">
+                        <div class="grid-item-title">Luz e Sombra Digital</div>
+                        <div class="grid-item-description">Estudo de contraste que me ensinou sobre hierarquia visual no design de interfaces.</div>
+                        <div class="grid-item-technique">Carvão e giz branco</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Projetos - Seção Unificada -->
+        <section id="projetos" class="card projects-card section" aria-label="Skills e Projetos">
+            <h2>Skills & Projetos</h2>
+            
+            <!-- Stack Técnico -->
+            <div class="tech-stack">
+                <div class="tech-categories">
+                    <div class="tech-category">
+                        <h3>Frontend</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">SASS</span>
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3>Design</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Adobe CC</span>
+                            <span class="tech-tag">UI/UX</span>
+                            <span class="tech-tag">Design Systems</span>
+                            <span class="tech-tag">Prototyping</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projetos -->
+            <div class="project-carousel">
+                <div class="project-slide">
+                    <div class="project-img" style="background-image:url('images/triple_peaks_library.webp');" aria-label="Imagem do projeto Biblioteca Triple Peaks"></div>
+                    <div class="project-desc">
+                        <h3>Biblioteca Triple Peaks</h3>
+                        <p>Website responsivo para biblioteca temática inspirado em montanhas. Navegação simples e design limpo focado na experiência do utilizador.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive</span>
+                        </div>
+                        <a href="https://talimiranda.github.io/Biblioteca-Triple-Peaks/" target="_blank" rel="noopener" class="project-link">Ver Projeto →</a>
+                    </div>
+                </div>
+
+                <div class="project-slide">
+                    <div class="project-img" style="background-image:url('images/coffeeshop.webp');" aria-label="Imagem do projeto Coffee Shop"></div>
+                    <div class="project-desc">
+                        <h3>Coffee Shop</h3>
+                        <p>Site para cafeteria artesanal com foco na atmosfera acolhedora e experiência sensorial. Design que evoca o aroma do café.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">Flexbox</span>
+                            <span class="tech-tag">Mobile First</span>
+                        </div>
+                        <a href="https://talimiranda.github.io/web_project_coffeeshop" target="_blank" rel="noopener" class="project-link">Ver Projeto →</a>
+                    </div>
+                </div>
+
+                <div class="project-slide">
+                    <div class="project-img" style="background-image:url('images/homeland_\ project.webp');" aria-label="Imagem do projeto Homeland"></div>
+                    <div class="project-desc">
+                        <h3>Homeland</h3>
+                        <p>Plataforma digital para explorar destinos e alojamentos. Design responsivo e intuitivo que inspira a viajar.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS Grid</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">API Integration</span>
+                        </div>
+                        <a href="https://talimiranda.github.io/web_project_homeland" target="_blank" rel="noopener" class="project-link">Ver Projeto →</a>
+                    </div>
+                </div>
+
+                <div class="project-slide">
+                    <div class="project-img" style="background-image:url('images/Cleciane.webp');" aria-label="Imagem do protótipo Cleciane"></div>
+                    <div class="project-desc">
+                        <h3>Cleciane – App Design</h3>
+                        <p>Protótipo interativo desenvolvido no Figma para aplicação mobile. Exploração de layouts modernos e usabilidade intuitiva com foco no utilizador.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Prototyping</span>
+                            <span class="tech-tag">Mobile UI</span>
+                            <span class="tech-tag">User Research</span>
+                        </div>
+                        <a href="https://www.figma.com/proto/c3QHf127WWlOGXN85uEr3H/Cleciane?node-id=0-1&t=v4kMclU1jXgXZnT4-1" target="_blank" rel="noopener" class="project-link">Ver Protótipo →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTAs para Recrutadores -->
+            <div class="recruiter-actions">
+                <h3>Para Recrutadores</h3>
+                Interessado no meu trabalho?
+                <br>
+                Aqui tens acesso direto aos recursos profissionais:
+                <br>
+                <br>
+                <div class="action-buttons">
+                    <a href="download/CV ATS - TALITA MIRANDA.pdf" class="btn-download" download aria-label="Baixar CV em PDF">
+                        Download CV
+                    </a>
+                    
+                    <div class="professional-links">
+                        <a href="https://www.linkedin.com/in/talimiranda/" target="_blank" rel="noopener" class="btn-social" aria-label="Ver perfil no LinkedIn">
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/talimiranda" target="_blank" rel="noopener" class="btn-social" aria-label="Ver repositórios no GitHub">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog (lista de posts) -->
+        <section id="blog" class="card blog-card section" aria-label="Blog">
+            <h2>Blog</h2>
+            <div class="blog-list">
+                <article class="blog-post">
+                    <h3>O Processo Criativo Unna</h3>
+                    <p>Cada projeto é uma semente. Descobre o processo único onde design e alma se encontram para criar experiências digitais verdadeiramente transformadoras.</p>
+                    <a href="processo-criativo-unna.html" class="read-more">Continuar a ler</a>
+                </article>
+                
+                <article class="blog-post">
+                    <h3>UX no quotidiano – Como somos influenciados</h3>
+                    <p>Há magia escondida em cada gesto do nosso dia. Entre o toque no alarme e o último scroll antes de dormir, somos conduzidos por decisões invisíveis que moldam a nossa experiência do mundo.</p>
+                    <a href="ux-no-quotidiano.html" class="read-more">Continuar a ler</a>
+                </article>
+                
+                <article class="blog-post">
+                    <h3>Design com Alma – O Human Design aplicado a projetos</h3>
+                    <p>Human Design não é só autoconhecimento — é também uma bússola criativa. Descobre como a energia do teu perfil pode guiar decisões de layout, cores e estrutura.</p>
+                    <a href="design-com-alma-human-design.html" class="read-more">Continuar a ler</a>
+                </article>
+            </div>            
+        </section>
+       
+        <!-- Contacto -->
+        <section id="contato" class="card contact-card section" aria-label="Formulário de contacto">
+            <h2>Contacto</h2>
+            <p>A tua mensagem pode ser o início de algo extraordinário.</p>
+            <form id="contact-form" class="contact-form" novalidate>
+                <input type="text" name="name" placeholder="Nome *" required aria-label="Nome" autocomplete="name">
+                <input type="email" name="email" placeholder="Email *" required aria-label="Email" autocomplete="email">
+                <input type="text" name="title" placeholder="Assunto" aria-label="Assunto">
+                <textarea name="message" rows="4" placeholder="Mensagem *" required aria-label="Mensagem"></textarea>
+                <button type="submit">
+                    <span>O vento traz mensagens de almas prontas para desabrochar...</span>
+                    <span class="arrow">➔</span>
+                </button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer card section" id="footer-content" aria-label="Rodapé">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo_unna_transparente.webp" alt="Logotipo Unna" />
+                </div>
+                <div class="footer-info">
+                    <span id="clock" class="clock" aria-live="polite"></span>
+                    <span id="footer-quote" class="footer-quote" aria-live="polite"></span>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook" class="social-icon">
+                      <img src="images/facebook_icon.svg" alt="Facebook">
+                    </a>
+                    <a href="#" aria-label="Instagram" class="social-icon">
+                      <img src="images/instagram_icon.svg" alt="Instagram">
+                    </a>
+                    <a href="https://github.com/talimiranda" target="_blank" rel="noopener" aria-label="Github" class="social-icon">
+                        <img src="images/github_icon.svg" alt="GitHub">
+                    </a>
+                    <a href="https://linkedin.com/in/talita-miranda" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+                        <img src="images/linkedin_icon.svg" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+   <!-- Modal de Sobre mim -->
+    <div id="about-modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fechar modal">&times;</button>
+            <h2>Da administração ao design sagrado</h2>
+            <p>Sou a Talita, e a minha jornada não foi linear — foi orgânica.</p>
+            <p>Em 2010 formei-me em Administração. Tinha tudo planeado: carreira estruturada, metas claras, sucesso medido em números. Mas algo dentro de mim sussurrava que havia mais.</p>
+            <p>Em 2019 o nascimento do meu filho mudou tudo. O mundo corporativo já não fazia tanto sentido, mas o que fazer? Esse sussurro transformou-se numa busca. Mergulhei numa paixão que antes era apenas um hobby — a gastronomia.</p>
+            <p>Em 2020, no auge da pandemia, mergulhei numa jornada espiritual e de autoconhecimento profunda. Foi ali que descobri que os negócios não são apenas estratégia — são extensões da nossa alma.</p>
+            <p>Em 2024 uni todos esses mundos. Descobri que o design não é apenas estética — é alquimia visual.</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
